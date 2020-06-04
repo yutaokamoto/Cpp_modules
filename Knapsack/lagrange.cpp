@@ -66,7 +66,7 @@ int lagrange_for_knapsack(vector<int> Unassigned, int Capacity, vector<int> V, v
                 x[i-n_of_assigned] = 0;
             }
         }
-        for(auto&& i:x){cout << "x[i]=" << i << endl;}
+        //for(auto&& i:x){cout << "x[i]=" << i << endl;}
 
         //最適解xにおける目的関数の最適値f(λ)の各ラグランジュ乗数についての偏微分df(λ)/dλを求める．
         //解xでの制約の値
@@ -75,30 +75,29 @@ int lagrange_for_knapsack(vector<int> Unassigned, int Capacity, vector<int> V, v
             temp += x[i]*W[i+n_of_assigned];
         }
         deriative = Capacity - temp;
-        cout << "deriative=" << deriative << endl;
+        //cout << "deriative=" << deriative << endl;
 
         //終了の判定．|(df(λ)/dλ)/iteration| < e
         double grad = deriative/(double)iteration; //キャスト!!
-        cout << "iteration=" << iteration << endl << "grad=" << grad << endl;
+        //cout << "iteration=" << iteration << endl << "grad=" << grad << endl;
         if(abs(grad) < e){
             break;
         }
 
         //ラグランジュ乗数の更新
         ld = max(0.0, ld-grad);
-        cout << "ld=" << ld << endl << endl;
+        //cout << "ld=" << ld << endl << endl;
 
         //次のループへ
         iteration++;
     }
-    printf("final\tld=%f\n", ld);
+    //printf("final\tld=%f\n", ld);
 
     for(auto&& i : Unassigned){
         opt += V[i]*x[i-n_of_assigned];
     }
     opt += ld*deriative;
 
-    cout << endl;
     return opt;
 }
 
