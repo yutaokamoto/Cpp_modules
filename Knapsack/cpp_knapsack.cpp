@@ -1,6 +1,6 @@
-#include "knapsack.hpp"
-//#include <bits/stdc++.h>
-//using namespace std;
+//#include "knapsack.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 struct node{
     int name;
@@ -296,7 +296,7 @@ pair<vector<int>, int> dynamic(int N, vector<int> V, vector<int> W, int K){
     return make_pair(x, matrix[K][N]);
 }
 
-/*int main(){
+int main(){
     
     int N = 3;
     vector<int> V{45,48,35};
@@ -305,6 +305,11 @@ pair<vector<int>, int> dynamic(int N, vector<int> V, vector<int> W, int K){
     //int x = Relax(0, N, V, W,K);
 
     pair<vector<int>, int> ans = branchandbound(N, V, W, K);
+
+    for(auto&& i : ans.first){
+        cout << i << "\t";
+    }
+    cout << endl << ans.second << endl;
 
     //for(auto&& i : ans.first){
     //    cout << i << endl;
@@ -323,10 +328,10 @@ pair<vector<int>, int> dynamic(int N, vector<int> V, vector<int> W, int K){
     //scout << now.name << endl;
 
     return 0;
-}*/
+}
 
-PYBIND11_MODULE(cpp_knapsack, m) {
+/*PYBIND11_MODULE(cpp_knapsack, m) {
     m.doc() = "solve Knapsack Problem.";
     m.def("dynamic", &dynamic, "A function which solve knapsack by dynamic programming.\nArguments :\nThe number of items N\nThe list of item`s value V\nThe weight of item`s weight W\nThe capacity of the knapsack K");
     m.def("branchandbound", &branchandbound, "A function which solve knapsack by branch and bound using depth-first search.\nArguments :\nThe number of items N\nThe list of item`s value V\nThe weight of item`s weight W\nThe capacity of the knapsack K");
-}
+}*/
