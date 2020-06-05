@@ -87,7 +87,7 @@ int lagrange_for_knapsack(vector<int> Unassigned, int Capacity, vector<int> V, v
         if(abs(step_size) < e){
             break;
         }
-
+        
         //ラグランジュ乗数の更新．
         ld = max(0.0, ld-step_size); //ld+step_sizeじゃない．
             //cout << "ld=" << ld << endl << endl;
@@ -120,7 +120,7 @@ int main(){
     //cout << accumulate(next(l.begin(), (l.size()-v.size())), l.end(), 0, [](int i, int j, vector<int> a, vector<int> b){return a[i]*b[i];}) << endl;
     //cout << accumulate(*(l.begin()+2), l.end(), 0) << endl; これだとできない
     */
-   
+
     int N = 3;
     vector<int> unassigned{0,1,2};
     vector<int> V{45,48,35};
