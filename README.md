@@ -6,16 +6,16 @@
 ## Pybind11を使ったPyhotnモジュール
 ### 1. TSP
 * #### 使用しているアルゴリズム
-	1. Nearest-Neighborhood アルゴリズムにより求解
+	1.　Nearest-Neighborhood アルゴリズムにより求解
 
 * #### 使用方法　→　example.ipynbを参照
-	1. .soファイルをダウンロード
+	1.　.soファイルをダウンロード
 
- 	2. 1,のファイルと同じディレクトリに.py, .ipynbファイルを作成
+ 	2.　1,のファイルと同じディレクトリに.py, .ipynbファイルを作成
 
- 	3. import TSPでモジュールをインポート
+ 	3.　import TSPでモジュールをインポート
 
- 	4. help(TSP)でモジュールの概要
+ 	4.　help(TSP)でモジュールの概要
 	
 		* メソッドの名前  
 		
