@@ -1,7 +1,7 @@
 # cpp_modules
-C++でつくったPythonモジュール
+・ C++でつくったPythonモジュール
 
-.soファイルと同じディレクトリにPythonの実行ファイルを置き，importにより読み込むことで使用可能　→　各フォルダ内のexample.ipynbを参照
+・ .soファイルと同じディレクトリにPythonの実行ファイルを置き，importにより読み込むことで使用可能　→　各フォルダ内のexample.ipynbを参照
 
 ## Pybind11を使ったPyhotnモジュール
 ### 1. TSP
