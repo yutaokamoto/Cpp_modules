@@ -10,26 +10,26 @@
 #### 1.1 Algorithms
 	1.　Nearest-Neighborhood Algorithm
 
+<!--1,のファイルと同じディレクトリに.py, .ipynbファイルを作成-->
+<!--import TSPでモジュールをインポート-->
+<!--help(TSP)でモジュールの概要-->
+<!--メソッドの名前-->
+<!--メソッドの引数-->
+<!--メソッドの返り値-->
 #### 1.2 How to use?　→　example.ipynbを参照
 	1.　Download .so file.
 
  	2.　Create a .py or .ipynb file in the directory including .so file in 1.
- 	<!--1,のファイルと同じディレクトリに.py, .ipynbファイルを作成-->
 
  	3.　Do "import TSP" for importing this TSP module. 
- 	<!--import TSPでモジュールをインポート-->
-
+ 	
  	4.　Do "help(TSP)" for showing the outline of this module. You can get descriptions like below.
- 	<!--help(TSP)でモジュールの概要-->
 	
 		- The method's name.
-		<!--メソッドの名前-->
 		
    		- The arguments of this methods.
-   		<!--メソッドの引数  -->
 	
   		- The return value of this method.
-  		<!--メソッドの返り値  -->
 
 ### 2. Knaosack
 #### ALgorithms
@@ -41,16 +41,13 @@
 	1.　Download .so file.
 
  	2.　Create a .py or .ipynb file in the directory including .so file in 1.
- 	<!--1,のファイルと同じディレクトリに.py、.ipynbファイルを作成-->
 
- 	3.　Do "import Knapsack" for importing this TSP module.
- 	<!--import cpp_knapsackでモジュールをインポート-->
-
- 	4.　Do "help(TSP)" for showing the outline of this module. You can get descriptions like below.
- 	<!--help(cpp_knapsack)でモジュールの概要-->
+ 	3.　Do "import Knapsack" for importing this TSP module. 
+ 	
+ 	4.　Do "help(Knapsack)" for showing the outline of this module. You can get descriptions like below.
 	
-		- The method's name.<!--メソッドの名前-->
+		- The method's name.
 		
-   		- The arguments of this methods.<!--メソッドの引数  -->
+   		- The arguments of this methods.
 	
-  		- The return value of this method<!--メソッドの返り値  -->
+  		- The return value of this method.
