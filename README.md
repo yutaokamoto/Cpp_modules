@@ -1,8 +1,10 @@
-# Module for optimization
-* This is a module for Python made by C++.
+# Module for optimization problems
+* This is a Python module for solving optimization problems.
 <!--* C++でつくったPython用のモジュールです。-->
 
-* Locate exec file of Python in the directory including .so file of C++. And you can use this module by importing it. →　You can refer to the example.ipynb in each folder.
+* This module is built in C++. And it has an Python interface.<!--インターフェースはPythonで、中身はC++です。-->
+
+* You can use it by executing Python file(.py of .ipynb file) in the directory including a ".so file". And you can use this module by importing it. →　You can refer to the example.ipynb in each folder.
 <!--* .soファイルと同じディレクトリにPythonの実行ファイルを置き、importにより読み込むことで使用可能です。　→　詳しくは各フォルダ内のexample.ipynbを参照-->
 
 ## Description
@@ -25,7 +27,7 @@
  	
  	4.　Do "help(TSP)" for showing the outline of this module. You can get descriptions like below.
 	
-		- The method's name.
+		- The method's name. (method means )
 		
    		- The arguments of this methods.
 	
