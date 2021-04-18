@@ -4,7 +4,9 @@
 
 * This module is built in C++. And it has a Python interface.<!--インターフェースはPythonで、中身はC++です。-->
 
-* You can use it by executing Python file(.py of .ipynb file) in the directory including a ".so file". And you can use this module by importing it. →　You can refer to the example.ipynb in each folder.
+* You can use it by executing Python file(.py of .ipynb file) in the directory including a ".so file".
+
+* And you can use this module by importing it. →　You can refer to the example.ipynb in each folder.
 <!--* .soファイルと同じディレクトリにPythonの実行ファイルを置き、importにより読み込むことで使用可能です。　→　詳しくは各フォルダ内のexample.ipynbを参照-->
 
 ## Description
