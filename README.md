@@ -2,7 +2,7 @@
 * This is a module for Python made by C++.
 <!--* C++でつくったPython用のモジュールです。-->
 
-* Locate exec file of Python in the directory including .so file of C++. And you can use this module by importing it.　→　More detail is descrived in example.ipynb in each folder.
+* Locate exec file of Python in the directory including .so file of C++. And you can use this module by importing it.　\n→　You can refer to the example.ipynb in each folder.
 <!--* .soファイルと同じディレクトリにPythonの実行ファイルを置き、importにより読み込むことで使用可能です。　→　詳しくは各フォルダ内のexample.ipynbを参照-->
 
 ## Description
