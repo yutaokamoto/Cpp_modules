@@ -9,8 +9,11 @@
 
 ## Description
 ### 1. TSP
+Travering salesman problem is the one of the most famous optimization problems.
+More detail description is [here](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
+
 #### 1.1 Algorithms
-	1.　Nearest-Neighborhood Algorithm
+	1.　Nearest-Neighborhood Algorithm : This is a famous heauristic method for TSP. Construct the tour by moving the nearest location from now location.
 
 <!--1,のファイルと同じディレクトリに.py, .ipynbファイルを作成-->
 <!--import TSPでモジュールをインポート-->
@@ -34,10 +37,13 @@
   		- The return value of this method.
 
 ### 2. Knaosack
+Knapsack is the classic optimization problem.
+More detail is [here](https://en.wikipedia.org/wiki/Knapsack_problem).
+
 #### ALgorithms
-	1.　Dynamic Programming
+	1.　Dynamic Programming : This is a type of strict methods. Start with 
 	
-	2.　Branch and bound algorithm
+	2.　Branch and bound algorithm : This is a type of strict methods. More efficient than the exhaust search.
 
 #### How to use?　→　You may refer to the example.ipynb in Knapsack folder.
 	1.　Download .so file.
