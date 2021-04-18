@@ -42,9 +42,11 @@ Knapsack is the classic optimization problem.
 More detail is [here](https://en.wikipedia.org/wiki/Knapsack_problem).
 
 #### ALgorithms
-	1.　Dynamic Programming : This is a type of strict methods. Based on the recursive method.
+	1.　Dynamic Programming : This is a type of strict methods.
+	                          Based on the recursive method.
 	
-	2.　Branch and bound algorithm : This is a type of strict methods. More efficient than the exhaust search.
+	2.　Branch and bound algorithm : This is a type of strict methods.
+	                                 More efficient than the exhaust search.
 
 #### How to use?　→　You may refer to the example.ipynb in Knapsack folder.
 	1.　Download .so file.
