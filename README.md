@@ -4,6 +4,8 @@
 
 * This module is built in C++. And it has a Python interface.<!--インターフェースはPythonで、中身はC++です。-->
 
+* I used [pybind11](https://github.com/pybind/pybind11) to build this module.
+
 * You can use it by executing Python file(.py of .ipynb file) in the directory including a ".so file".
 
 * And you can use this module by importing it. →　You can refer to the example.ipynb in each folder.
