@@ -1,5 +1,5 @@
-//#include "knapsack.hpp"
-#include <bits/stdc++.h>
+#include "knapsack.hpp"
+//#include <bits/stdc++.h>
 using namespace std;
 
 struct node{
@@ -10,10 +10,6 @@ struct node{
     struct node* left = NULL;
     struct node* right = NULL;
 };
-
-//木にノードを追加する
-/*void insert(){
-};*/
 
 //ノードを数字として持つ用
 /*int Node_depth(int node){
@@ -27,10 +23,10 @@ struct node{
         }
     }
     return depth;
-}*/
+}
 
 //ノードを数字として持つ用
-/*vector<int> Restoration(int node){
+vector<int> Restoration(int node){
     vector<int> x;
     while(!(node==0)){
         if(node%2==0){
@@ -43,46 +39,10 @@ struct node{
         }
     }
     return x;
-}*/
-
-//ノードを構造体で持つ用
-vector<int> Restoration(int node){
-    vector<int> x;
-    while(node > 0){
-        x.push_back(node%10);
-        node = node/10;
-    }
-    return x;
-}
-
-int Simplex(vector<int> Unassigned, int Capacity, vector<int> V, vector<int> W){
-    int x = 0;
-    sort(Unassigned.begin(), Unassigned.end(), [&](const int i, const int j){
-        return V[i]/W[i] > V[j]/W[j];
-    });
-    //for(auto&& i : Unassigned){
-    //        cout << "V/W order " << i << " ";
-    //}cout << endl;
-
-    for(auto &&i : Unassigned){
-        if(Capacity>0){
-            if(W[i]<Capacity){
-                x += V[i];
-                Capacity -= W[i];
-            }
-            else{
-                x += V[i]*(Capacity/W[i]);
-            }
-        }
-        else{
-            break;
-        }
-    }
-    return x;
 }
 
 //ノードを数字として持つ用
-/*int Relax(int now, int N, vector<int> V, vector<int> W, int K){
+int Relax(int now, int N, vector<int> V, vector<int> W, int K){
     int x = 0;
     int Capacity = K;
     vector<int> Assigned = Restoration(now);
@@ -110,28 +70,10 @@ int Simplex(vector<int> Unassigned, int Capacity, vector<int> V, vector<int> W){
         x += Simplex(Unassigned, Capacity, V, W);
         return x;
     }
-}*/
-
-//ノードを構造体で持つ用
-int Relax(struct node now, int N, vector<int> V, vector<int> W){
-    int x = now.value;
-    vector<int> Unassigned;
-
-    for(int i=now.depth; i<N; i++){
-        Unassigned.push_back(i);
-    }
-
-    if(now.room<0){
-        return 0; //実行不能解
-    }
-    else{
-        x += Simplex(Unassigned, now.room, V, W);
-        return x;
-    }
 }
 
 //ノードを数字として持つ
-/*pair<vector<int>, int> branchandbound(int N, vector<int> V, vector<int> W, int K){
+pair<vector<int>, int> branchandbound(int N, vector<int> V, vector<int> W, int K){
     vector<int> x;
     ////vector<int> now; 走査中のノードが対応する解を表す
     int now = 0;
@@ -185,6 +127,60 @@ int Relax(struct node now, int N, vector<int> V, vector<int> W){
 
     return make_pair(x, solution_temp);
 }*/
+
+//ノードを構造体で持つ用
+vector<int> Restoration(int node){
+    vector<int> x;
+    while(node > 0){
+        x.push_back(node%10);
+        node = node/10;
+    }
+    return x;
+}
+
+int Simplex(vector<int> Unassigned, int Capacity, vector<int> V, vector<int> W){
+    int x = 0;
+    sort(Unassigned.begin(), Unassigned.end(), [&](const int i, const int j){
+        return V[i]/W[i] > V[j]/W[j];
+    });
+    //for(auto&& i : Unassigned){
+    //        cout << "V/W order " << i << " ";
+    //}cout << endl;
+
+    for(auto &&i : Unassigned){
+        if(Capacity>0){
+            if(W[i]<Capacity){
+                x += V[i];
+                Capacity -= W[i];
+            }
+            else{
+                x += V[i]*(Capacity/W[i]);
+            }
+        }
+        else{
+            break;
+        }
+    }
+    return x;
+}
+
+//ノードを構造体で持つ用
+int Relax(struct node now, int N, vector<int> V, vector<int> W){
+    int x = now.value;
+    vector<int> Unassigned;
+
+    for(int i=now.depth; i<N; i++){
+        Unassigned.push_back(i);
+    }
+
+    if(now.room<0){
+        return 0; //実行不能解
+    }
+    else{
+        x += Simplex(Unassigned, now.room, V, W);
+        return x;
+    }
+}
 
 //ノードを構造体で持つ
 pair<vector<int>, int> branchandbound(int N, vector<int> V, vector<int> W, int K){
@@ -298,7 +294,7 @@ pair<vector<int>, int> dynamic(int N, vector<int> V, vector<int> W, int K){
 
 int main(){
     
-    int N = 3;
+    /*int N = 3;
     vector<int> V{45,48,35};
     vector<int> W{5,8,3};
     int K = 10;
@@ -309,7 +305,7 @@ int main(){
     for(auto&& i : ans.first){
         cout << i << "\t";
     }
-    cout << endl << ans.second << endl;
+    cout << endl << ans.second << endl;*/
 
     //for(auto&& i : ans.first){
     //    cout << i << endl;
@@ -330,8 +326,8 @@ int main(){
     return 0;
 }
 
-/*PYBIND11_MODULE(cpp_knapsack, m) {
+PYBIND11_MODULE(Knapsack, m) {
     m.doc() = "solve Knapsack Problem.";
     m.def("dynamic", &dynamic, "A function which solve knapsack by dynamic programming.\nArguments :\nThe number of items N\nThe list of item`s value V\nThe weight of item`s weight W\nThe capacity of the knapsack K");
     m.def("branchandbound", &branchandbound, "A function which solve knapsack by branch and bound using depth-first search.\nArguments :\nThe number of items N\nThe list of item`s value V\nThe weight of item`s weight W\nThe capacity of the knapsack K");
-}*/
+}
