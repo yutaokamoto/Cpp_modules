@@ -17,8 +17,7 @@ Travering salesman problem is the one of the most famous optimization problems.
 More detail description is [here](https://en.wikipedia.org/wiki/Travelling_salesman_problem).
 
 #### 1.1 Algorithms
-	1.　Nearest-Neighborhood Algorithm : This is a famous heuristic method for TSP. 
-					     Construct the tour by moving the nearest location from now location.
+	1.　Nearest-Neighborhood Algorithm : This is a famous heuristic method for TSP. Construct the tour by moving the nearest location from now location.
 
 <!--1,のファイルと同じディレクトリに.py, .ipynbファイルを作成-->
 <!--import TSPでモジュールをインポート-->
